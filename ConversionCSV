@@ -22,7 +22,7 @@ WAY_TAGS_PATH = "ways_tags.csv"
 LOWER_COLON = re.compile(r'^([a-z]|_)+:([a-z]|_)+')
 PROBLEMCHARS = re.compile(r'[=\+/&<>;\'"\?%#$@\,\. \t\r\n]')
     
-   #schema.schema (still having trouble understanding how to implement the custom schema provided. Does it need to be saved as a seperate file, or should it be placed in this script?)
+   #Implement provided schema from Case Study. Saved as a seperate file (schema.py), imported from "import schema".
 SCHEMA = schema.schema
 
     
@@ -41,8 +41,8 @@ def shape_element(element, node_attr_fields=NODE_FIELDS, way_attr_fields=WAY_FIE
     node_attribs = {}
     way_attribs = {}
     way_nodes = []
-    tags = []  
-    p = 0 # Handle secondary tags the same way for both node and way elements
+    tags = []  # Handle secondary tags the same way for both node and way elements
+    p = 0 
 
     if element.tag == 'node':
         for i in NODE_FIELDS:
@@ -134,7 +134,7 @@ def writerow(self, row):
     super(UnicodeDictWriter, self).writerow({
        k: (v.encode('utf-8') if isinstance(v, unicode) else v) for k, v in row.iteritems()
         })
-
+#unicode, row.iteritems
 def writerows(self, rows):
     for row in rows:
         self.writerow(row)
@@ -185,4 +185,3 @@ if __name__ == '__main__':
         # Note: Validation is ~ 10X slower. For the project consider using a small
         # sample of the map when validating.
         process_map(OSM_PATH, validate=True)
-
