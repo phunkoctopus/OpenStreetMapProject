@@ -1,0 +1,6 @@
+References 
+
+References used for my project include Udacity forum posts (https://discussions.udacity.com/t/are-the-csvs-supposed-to-be-double-spaced/285305/8), (https://discussions.udacity.com/t/apply-update-name-function/181952/20), and the GitHub repository provided by Udacity (https://gist.github.com/carlward/54ec1c91b62a5f911c42#file-sample_project-md).
+
+Also used was the following SQL reference website (http://www.dofactory.com/sql/select-min-max).
+
