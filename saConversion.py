@@ -64,6 +64,16 @@ def shape_element(element, node_attr_fields=NODE_FIELDS, way_attr_fields=WAY_FIE
                node_tags_attribs['key'] = tag.attrib['k'][split_index+2:]
                node_tags_attribs['value'] = tag.attrib['v']
                node_tags_attribs['type'] = tag.attrib['k'][:split_index+1]
+                
+               if tag.attrib['k'] == 'addr:street':
+                    node_tags_attribs['value'] = update_name(tag.attrib['v'], mapping)
+                else:
+                    node_tags_attribs['value'] = tag.attrib['v'] 
+                tags.append(node_tags_attribs) 
+              
+            elif PROBLEMCHARS.search(tag.attrib['k']):
+                continue 
+            
             else:
                node_tags_attribs['id'] = element.attrib['id']
                node_tags_attribs['key'] = tag.attrib['k']
