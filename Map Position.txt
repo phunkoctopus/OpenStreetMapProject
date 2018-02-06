@@ -1,0 +1,7 @@
+Geographic Area
+Sydney, New South Wales, Australia
+
+• https://mapzen.com/data/metro-extracts/metro/sydney_australia/
+• https://www.openstreetmap.org/relation/5750005
+
+The map dataset chosen for this project is the Sydney, Australia metro area dataset from MapZen. I decided on this location because of a study abroad program in Australia I participated in during my undergrad. I lived in and traveled the country for six months, but was unable to trek the Harbour City. I have friends and family currently living in Sydney and would like to visit the area soon. In this project I'm looking to explore the dataset in an effort to contribute to the improvement of map data on the OpenStreetMap database website, gain some additional geographic familiarity and uncover some interesting facts about the city.
